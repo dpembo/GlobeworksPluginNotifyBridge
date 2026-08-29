@@ -1,0 +1,19 @@
+name: GlobeworksBridges
+version: '${project.version}'
+main: uk.globeworks.bridges.BridgesPlugin
+api-version: '1.21'
+author: Globeworks
+description: Bridges Towny, SiegeWar, and LuckPerms into GenericHistoryEvent for NationHistoryBook.
+depend: [GlobeworksAPI]
+softdepend: [Towny, SiegeWar, LuckPerms]
+
+commands:
+  gwbridges:
+    description: GlobeworksBridges admin (debug toggle, reload).
+    usage: /gwbridges debug [on|off] | /gwbridges reload
+    permission: globeworks.bridges.admin
+
+permissions:
+  globeworks.bridges.admin:
+    description: Toggle bridges debug and reload config.
+    default: op

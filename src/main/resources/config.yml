@@ -1,0 +1,34 @@
+debug: false
+
+# GlobeworksBridges — enable/disable each source independently.
+
+bridges:
+  towny:
+    enabled: true
+    # Fire history when a town reaches these resident counts (after a join)
+    population-milestones: [2, 5, 10, 25]
+    # Also fire when the *nation* total residents hit these counts
+    nation-population-milestones: [2, 5, 10, 25, 50, 100]
+    events:
+      nation-founded: true
+      nation-disbanded: true
+      town-founded: true
+      town-disbanded: true
+      resident-joined-town: true   # always logs join; milestones are extra
+      population-milestone: true
+
+  siegewar:
+    enabled: true
+    events:
+      siege-started: true
+      siege-ended: true
+
+  luckperms:
+    enabled: true
+    # Only these group names generate history (empty = fire nothing)
+    notable-groups: []
+    # Example:
+    # notable-groups:
+    #   - nation_leader
+    #   - officer
+    #   - vip
